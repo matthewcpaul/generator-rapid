@@ -2,7 +2,7 @@
   "name": "generator-rapid",
   "version": "0.1.0",
   "description": "A starter environment for designing with the Rapid Design System",
-  "repository": "matthewcpaul/yeoman-generator-rapid",
+  "repository": "matthewcpaul/generator-rapid",
   "license": "ISC",
   "author": "Matthew C. Paul",
   "main": "app/index.js",
