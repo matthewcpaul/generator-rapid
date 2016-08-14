@@ -1,0 +1,26 @@
+{
+  "name": "generator-rapid",
+  "version": "0.1.0",
+  "description": "A starter environment for designing with the Rapid Design System",
+  "repository": "matthewcpaul/yeoman-generator-rapid",
+  "license": "ISC",
+  "author": "Matthew C. Paul",
+  "main": "app/index.js",
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "ibm",
+    "rapid",
+    "design-system",
+    "gulp",
+    "browser-sync",
+    "gh-pages"
+  ],
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.0"
+  }
+}
