@@ -7,7 +7,7 @@
   "author": "Matthew C. Paul",
   "main": "app/index.js",
   "files": [
-    "generators/app"
+    "app"
   ],
   "keywords": [
     "yeoman-generator",
