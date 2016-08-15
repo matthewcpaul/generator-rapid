@@ -20,7 +20,7 @@ To install generator-rapid with npm, run:
 npm install -g generator-rapid
 ```
 
-Then, run Yeoman to build a new project:
+Then, in your development directory, run Yeoman to build a new project:
 ```
 yo rapid
 ```
