@@ -1,5 +1,7 @@
 # Rapid Generator
 
+> Yeoman generator that scaffolds out a front-end web app using [gulp-armadillo](https://github.com/Snugug/gulp-armadillo) for the build process and [Rapid Design System](https://github.ibm.com/Whitewater/rapid) for the SCSS library.
+
 ## Installation
 
 ### Yeoman
@@ -20,7 +22,7 @@ To install generator-rapid with npm, run:
 npm install -g generator-rapid
 ```
 
-Then, in your development directory, run Yeoman to build a new project:
+Then, in your development directory, run Yeoman to create a new project:
 ```
 yo rapid
 ```
