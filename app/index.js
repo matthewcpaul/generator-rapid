@@ -6,26 +6,17 @@ var _ = require('lodash');
 var _s = require('underscore.string');
 
 module.exports = generators.Base.extend({
-  constructor: function () {
-
-    // Calling the super constructor is important so our generator is correctly set up
-    generators.Base.apply(this, arguments);
-
-    // Add your custom code here
-  },
-
   prompting: function () {
-    var done = this.async();
-
-    // Greet the user
+    // Have Yeoman greet the user
     this.log(yosay(
-      'Rapid Generator is creating a project for you to design, build, and deploy your app with the Rapid Design System.'
+      'Welcome to the lovely ' + chalk.red('Rapid Design System') + ' project generator!'
     ));
 
-    var prompts = [{
-      type: 'string',
-      name: 'project',
-      message: 'What is your project\'s name?',
+    // Ask the user for a mandatory project name
+    return this.prompt([{
+      type    : 'input',
+      name    : 'name',
+      message : 'What is your project’s name (e.g. Dashboard Prototype)?',
       validate: function (input) {
         if (input === '') {
           return 'Please enter a project name';
@@ -34,25 +25,23 @@ module.exports = generators.Base.extend({
           return true;
         }
       }
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      this.appname = _s.slugify(props.project);
-      // To access props later use this.props.someOption;
-
-      done();
+    }]).then(function (answers) {
+      this.appname = _s.slugify(answers.name);
     }.bind(this));
+  },
+
+  configuring: {
+    enforceFolderName: function () {
+      if (this.appname !== _.last(this.destinationRoot().split(path.sep))) {
+        this.destinationRoot(this.appname);
+      }
+
+      this.config.save();
+    }
   },
 
   writing: {
     app: function () {
-      // NVMRC
-      this.fs.copy(
-        this.templatePath('nvmrc'),
-        this.destinationPath('.nvmrc')
-      );
-
       // Package.json
       this.fs.copyTpl(
         this.templatePath('_package.json'),
@@ -80,6 +69,18 @@ module.exports = generators.Base.extend({
         this.templatePath('gitignore'),
         this.destinationPath('.gitignore')
       );
+
+      // nvmrc
+      this.fs.copy(
+        this.templatePath('nvmrc'),
+        this.destinationPath('.nvmrc')
+      );
+
+      // npmrc
+      this.fs.copy(
+        this.templatePath('npmrc'),
+        this.destinationPath('.npmrc')
+      );
     },
 
     projectfiles: function () {
@@ -95,9 +96,10 @@ module.exports = generators.Base.extend({
         this.templatePath('index.html'),
         this.destinationPath('index.html'),
         {
-          'name': this.props.project
+          'name': this.appname
         }
       );
+
       // JavaScript and SCSS files
       this.fs.copy(
         this.templatePath('js/**'),
@@ -116,9 +118,9 @@ module.exports = generators.Base.extend({
         );
       });
     }
-  },
-
-  install: function () {
-    this.installDependencies();
   }
+
+  // install: function () {
+  //   this.installDependencies();
+  // }
 });

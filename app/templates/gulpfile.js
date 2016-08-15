@@ -3,7 +3,6 @@ var sass         = require('gulp-sass');
 var scsslint     = require('gulp-scss-lint');
 var nano         = require('gulp-cssnano');
 var shell        = require('gulp-shell');
-var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 var deploy       = require('gulp-gh-pages');
@@ -11,9 +10,13 @@ var deploy       = require('gulp-gh-pages');
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src('scss/main.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(sourcemaps.write())
+  .pipe(sass({
+    includePaths: [
+      "./node_modules/ibm-design-colors",
+      "./node_modules/modularscale-sass/stylesheets",
+      "./node_modules/@whitewater/rapid/styles"
+    ]
+  }))
   .pipe(autoprefixer())
   .pipe(nano({discardComments: {removeAll: true}}))
   .pipe(gulp.dest('dist/css'))
@@ -22,7 +25,7 @@ gulp.task('sass', function() {
 
 // Pipe index.html to dist
 gulp.task('build', function() {
-  return gulp.src('index.html', 'pages/*.html')
+  return gulp.src('index.html')
   .pipe(gulp.dest('dist/'));
 });
 
