@@ -1,3 +1,4 @@
+'use strict';
 var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
@@ -30,6 +31,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
 
+  // Create the project folder using the project name
   configuring: {
     enforceFolderName: function () {
       if (this.appname !== _.last(this.destinationRoot().split(path.sep))) {
@@ -40,6 +42,7 @@ module.exports = generators.Base.extend({
     }
   },
 
+  // Create the project files
   writing: {
     app: function () {
       // Package.json
@@ -50,6 +53,7 @@ module.exports = generators.Base.extend({
           'name': this.appname
         }
       );
+
       // Gulpfile
       this.fs.copy(
         this.templatePath('gulpfile.js'),
@@ -81,33 +85,42 @@ module.exports = generators.Base.extend({
         this.templatePath('npmrc'),
         this.destinationPath('.npmrc')
       );
+
+      // armadillo
+      this.fs.copy(
+        this.templatePath('_armadillo.js'),
+        this.destinationPath('.armadillo.js')
+      );
     },
 
     projectfiles: function () {
       var folders = [
-        'images',
-        'videos',
-        'fonts'
+        'images'
+        // 'videos',
+        // 'fonts'
       ],
         _this = this;
 
-      // Index file
+      // Pages and templates
+      this.fs.copy(
+        this.templatePath('pages'),
+        this.destinationPath('pages')
+      );
+
       this.fs.copyTpl(
-        this.templatePath('index.html'),
-        this.destinationPath('index.html'),
-        {
-          'name': this.appname
-        }
+        this.templatePath('_layout.html'),
+        this.destinationPath('templates/_layout.html'),
+        { name: this.appname }
       );
 
       // JavaScript and SCSS files
       this.fs.copy(
-        this.templatePath('js/**'),
-        this.destinationPath('js')
+        this.templatePath('app.js'),
+        this.destinationPath('js/app.js')
       );
       this.fs.copy(
-        this.templatePath('scss/**'),
-        this.destinationPath('scss')
+        this.templatePath('sass/**'),
+        this.destinationPath('sass')
       );
 
       // Gitkeep folders
