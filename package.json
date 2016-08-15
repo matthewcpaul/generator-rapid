@@ -1,13 +1,13 @@
 {
   "name": "generator-rapid",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "description": "Yeoman generator for a Rapid Design System project",
   "license": "MIT",
   "repository": "matthewcpaul/generator-rapid",
   "author": {
     "name": "Matthew C. Paul",
     "email": "",
-    "url": "https://github.com/matthewcpaul"
+    "url": "https://github.ibm.com/matthewcpaul"
   },
   "main": "app/index.js",
   "files": [
