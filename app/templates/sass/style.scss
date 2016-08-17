@@ -1,5 +1,7 @@
-// Override config/settings go here
+// Override Rapid’s config/variables in _config.scss
+@import "config";
 
+// Import Rapid
 @import "rapid";
 @include rapid-everything;
 

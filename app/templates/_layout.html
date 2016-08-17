@@ -12,18 +12,19 @@
 </head>
 <body>
 
-  <header>
-    <div class="_container _container--XS">
-      <div class="_grid">
-        <h1 class="text--1">{{ title }}</h1>
-      </div>
+  <header class="_xs-pt--XS _xs-pb--XS">
+    <div class="_container _container--TRIM">
+      <a class="text--5" href="#">{{ title }}</a>
     </div>
   </header>
 
   <main>
     <div class="_container _container--TRIM">
       <div class="_grid">
-        {% block content %}{% endblock %}
+        <article class="_article--main">
+          {% block content %}{% endblock %}
+        </article>
+        <aside class="_article--side"></aside>
       </div>
     </div>
   </main>
