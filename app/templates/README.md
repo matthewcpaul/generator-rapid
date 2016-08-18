@@ -1,19 +1,14 @@
 # <%= name %>
 
-Welcome to your new awesome [Armadillo](https://github.com/Snugug/gulp-armadillo) powered website! For more in-depth documentation, check out its website.
+Welcome to your new [Armadillo](https://github.com/Snugug/gulp-armadillo) powered website!
 
-All of the Armadillo's [Basic Commands](https://github.com/Snugug/gulp-armadillo#basic-armadillo-commands) can be run by prepending `npm run` to them if you don't have Gulp globally installed, so if you wanted to run your Armadillo's development command, you can run `npm run gulp`.
-
-This app has also been setup with [Rapid](https://github.ibm.com/Whitewater/rapid). For more information, check out it's [documentation](https://pages.github.ibm.com/Whitewater/rapid/).
+This app has been setup with [Rapid](https://github.ibm.com/Whitewater/rapid), a SCSS design system for rapid prototyping at IBM.
 
 ## Starting the application
 
-Make sure your node modules are installed, then start the app and navigate to [localhost:3000](http://localhost:3000).
+Yeoman generously installed all of your dependencies as npm node modules, but there are a few pre-requisites if you've never used Gulp before:
 
-```sh
-$ npm install
-$ npm start
-```
+- Install Gulp
 
 ## Deploying to GitHub Pages
 
