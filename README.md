@@ -71,3 +71,11 @@ Navigate to https://travis.innovate.ibm.com/profile/{github-username}, click **s
 
 #### Set environment variable
 Once you've got your token, in your [Travis CI environment variables](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings), add a `GH_TOKEN` variable and set it to your token.
+
+#### Push to GitHub Enterprise
+Back in your terminal, push your project up to GitHub
+```
+git add .
+git commit -m ":tada: Initial commit"
+git push origin master
+```
