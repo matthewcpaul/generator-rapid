@@ -1,12 +1,14 @@
 ---
-title: 'Rapid Starter Environment'
+title: 'Rapid Templates'
 ---
 {% extends '_layout.html' %}
 
-{%block content %}
+{% block content %}
 <h1>Welcome to {{ title }}</h1>
 
-<p>Pages can be written in HTML and compiled via <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>. This allows for automatically templating. HTML supports <a href="http://jekyllrb.com/docs/frontmatter/">front-matter</a>, allowing for variables to be defined and passed in to a file when compiled.
+<p class="_xs-mb--XS" >Welcome to {{ title }}: A starter environment for prototyping with Rapid Design System. Build pages in the <code>pages</code> folder, and create templates in the <code>templates</code> folder. This project comes with the Rapid SCSS library, but you're free to write your own SCSS in the <code>sass</code> folder.</p>
 
-<p>Pages cal also be written in <a href="/markdown">markdown</a>.</p>
+<p class="_xs-mb--XS" >Pages can be writen in HTML and compiled via <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>, which allows for templating and supports frontmatter.</p>
+
+<p>Pages can also be written in <a href="https://help.github.com/articles/github-flavored-markdown/">Markdown</a> using the GitHub Flavored Markdown style.</p>
 {% endblock %}

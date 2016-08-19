@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% if title %}{{ title }} | {% endif %}<%= name %></title>
+  <title><%= name %> - {% if title %}{{ title }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- build:css /css/style.css -->
   <!-- Put CSS here -->
   <link rel="stylesheet" href="/css/style.css">
   <!-- endbuild -->
+
+  <link rel="shortcut icon" href="./images/favicon.png"/>
 </head>
 <body>
 
   <header class="_xs-pt--XS _xs-pb--XS">
     <div class="_container _container--TRIM">
-      <a class="text--5" href="#">{{ title }}</a>
+      <a class="text--5" href="#">Rapid Templates</a>
     </div>
   </header>
 
   <main>
     <div class="_container _container--TRIM">
       <div class="_grid">
-        <article class="_article--main">
+        <article class="_xs-col--12 _lg-col--9">
           {% block content %}{% endblock %}
         </article>
-        <aside class="_article--side"></aside>
       </div>
     </div>
   </main>

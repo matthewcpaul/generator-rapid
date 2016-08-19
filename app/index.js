@@ -109,13 +109,7 @@ module.exports = generators.Base.extend({
 
     // Create child folders
     var folders = [
-      'pages',
-      'templates',
-      'sass',
-      'js',
-      'images',
-      'fonts',
-      'documents'
+      'fonts'
     ];
 
     // Gitkeep folders
@@ -212,6 +206,12 @@ module.exports = generators.Base.extend({
       this.templatePath('_layout.html'),
       this.destinationPath('templates/_layout.html'),
       { name: this.appname }
+    );
+
+    // Images
+    this.fs.copy(
+      this.templatePath('favicon.png'),
+      this.destinationPath('images/favicon.png')
     );
 
     // JavaScript and SCSS files

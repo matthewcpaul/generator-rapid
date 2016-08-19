@@ -1,14 +1,14 @@
 # <%= name %>
 
-Welcome to your new [Armadillo](https://github.com/Snugug/gulp-armadillo) powered website!
-
-This app has been setup with [Rapid](https://github.ibm.com/Whitewater/rapid), a SCSS design system for rapid prototyping at IBM.
+Welcome to your new prototype! This app has been setup with [Rapid](https://github.ibm.com/Whitewater/rapid), a SCSS design system for rapid prototyping at IBM, and [Armadillo](https://github.com/Snugug/gulp-armadillo), a static site generator.
 
 ## Starting the application
 
-Yeoman generously installed all of your dependencies as npm node modules, but there are a few pre-requisites if you've never used Gulp before:
+Yeoman generously installed all of your dependencies as npm node modules, so all you need to do is run Gulp to start the app:
 
-- Install Gulp
+```bash
+gulp
+```
 
 ## Deploying to GitHub Pages
 
