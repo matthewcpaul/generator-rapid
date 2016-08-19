@@ -17,7 +17,8 @@ Generate an [SSH Key](https://help.github.com/articles/generating-a-new-ssh-key-
 
 #### Node
   - If you previously installed Node through the Node.js website, uninstall using [these instructions](https://gist.github.com/TonyMtz/d75101d9bdf764c890ef#file-gistfile1-txt)
-  - Install node the right way: http://blog.teamtreehouse.com/install-node-js-npm-mac
+  - Install node the right way with Homebrew: http://blog.teamtreehouse.com/install-node-js-npm-mac
+  - Fixing npm permissions (if you don't want to use Homebrew): https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
 #### Gulp
 Install Gulp globally:
@@ -51,9 +52,22 @@ cd /generator-rapid
 npm link
 ```
 
-## Yo Rapid
+#### Yo Rapid
 
 Then, back in your development directory, run Yeoman to create a new project:
 ```
 yo rapid
 ```
+
+## Automated deploys to GitHub
+
+Almost everything is set up for you to deploy your site to [GitHub Pages](https://pages.github.com/) with [Travis CI](https://travis.innovate.ibm.com).
+
+#### Personal access token
+You need to create an [personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) with the [`repo`](https://developer.github.com/v3/oauth/#scopes) scope. Keep this a secret! It's what lets Travis CI write to your `gh-pages` branch and deploy for you!
+
+#### Enable GitHub Repo from Travis CI
+Navigate to https://travis.innovate.ibm.com/profile/{github-username}, click **sync now**, and then toggle your repository **on**
+
+#### Set environment variable
+Once you've got your token, in your [Travis CI environment variables](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings), add a `GH_TOKEN` variable and set it to your token.
