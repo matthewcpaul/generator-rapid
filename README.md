@@ -34,6 +34,8 @@ Open up your terminal, and in any directory, run:
 npm install -g yo
 ```
 
+## Installation
+
 #### Yeoman Generator
 
 Yeoman travels light. She didn't pack any generators when she moved in. You can think of a generator like a plug-in, and like Yeoman herself, you only have to ask for generators once. This project is all about the Rapid Design System, so let’s grab that generator.
@@ -49,9 +51,9 @@ cd /generator-rapid
 npm link
 ```
 
-## Installation
+## Yo Rapid
 
-Then, in your development directory, run Yeoman to create a new project:
+Then, back in your development directory, run Yeoman to create a new project:
 ```
 yo rapid
 ```
