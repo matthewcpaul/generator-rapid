@@ -5,13 +5,15 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
 
 describe('generator-rapid:app', function () {
+  this.timeout(0);
+
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
       .withPrompts({
         project: 'foo',
         ghPages: true,
         email: 'foo@bar.baz',
-        ghRepo: 'https://github.com/Snugug/gulp-armadillo.git'
+        ghRepo: 'git@github.ibm.com:mcpaul/generator-rapid.git'
       })
       .on('end', done);
   });
@@ -32,15 +34,7 @@ describe('generator-rapid:app', function () {
 
   it('creates gitkeep files', function () {
     assert.file([
-      'pages/.gitkeep',
-      'templates/.gitkeep',
-      'sass/.gitkeep',
-      'js/.gitkeep',
-      'images/.gitkeep',
-      'videos/.gitkeep',
-      'audio/.gitkeep',
-      'fonts/.gitkeep',
-      'documents/.gitkeep'
+      'fonts/.gitkeep'
     ]);
   });
 

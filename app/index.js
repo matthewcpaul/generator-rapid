@@ -86,7 +86,7 @@ module.exports = generators.Base.extend({
         this.props.repoSlug = props.ghRepo.split('@')[1];
       }
 
-      props.cid = "Travis CI";
+      props.cid = 'Travis CI';
 
       done();
     }.bind(this));
@@ -125,7 +125,7 @@ module.exports = generators.Base.extend({
       this.templatePath('_package.json'),
       this.destinationPath('package.json'),
       {
-        'name': this.appname
+        name: this.appname
       }
     );
 
