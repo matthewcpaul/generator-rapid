@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= name %> - {% if title %}{{ title }}{% endif %}</title>
+  <title>one-alpha - {% if title %}{{ title }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- build:css /css/style.css -->
@@ -14,16 +14,16 @@
 </head>
 <body>
 
-  <header class="_xs-pt--XS _xs-pb--XS">
-    <div class="_container _container--TRIM">
-      <a class="text--5" href="#">Rapid Templates</a>
+  <header class="u-py-xs">
+    <div class="o-wrap">
+      <a class="f-link" href="#">Rapid Templates</a>
     </div>
   </header>
 
   <main>
-    <div class="_container _container--TRIM">
-      <div class="_grid">
-        <article class="_xs-col--12 _lg-col--9">
+    <div class="o-wrap">
+      <div class="o-grid">
+        <article class="o-col--12 _lg-o-col--9">
           {% block content %}{% endblock %}
         </article>
       </div>
