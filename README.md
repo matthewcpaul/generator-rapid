@@ -1,4 +1,4 @@
-# Rapid Generator [![Build Status](https://travis.innovate.ibm.com/mcpaul/generator-rapid.svg?token=zyKr4q1yXhTxTRCi32JS)](https://travis.innovate.ibm.com/mcpaul/generator-rapid)
+# Rapid Generator [![Build Status](https://travis.ibm.com/mcpaul/generator-rapid.svg?token=zyKr4q1yXhTxTRCi32JS&branch=master)](https://travis.ibm.com/mcpaul/generator-rapid)
 
 Yeoman generator that scaffolds out a front-end web app using [gulp-armadillo](https://github.com/Snugug/gulp-armadillo) for the build process and [Rapid Design System](https://github.ibm.com/Whitewater/rapid) for the SCSS library.
 
