@@ -1,5 +1,5 @@
 {
-  "name": "generator-rapid",
+  "name": "@whitewater/generator-rapid",
   "version": "0.1.0",
   "description": "Yeoman generator for a Rapid Design System project",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "design-system",
     "gulp",
     "browser-sync",
-    "gh-pages"
+    "gulp-gh-pages"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
