@@ -37,19 +37,25 @@ npm install -g yo
 
 ## Installation
 
+Rapid Generator is available as a package on IBM’s [NPM Enterprise registry](https://npm.whitewater.ibm.com/). To get access, follow [these instructions](https://github.ibm.com/Whitewater/npm-enterprise#option-2-using-npm-enterprise-for-private-packages-only) to authenticate with your w3id. You can initiate the authentication by running:
+
+```
+npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@<your-scope-here>
+```
+
+Next, create a `.npmrc` file in your project’s root directory and include:
+
+```
+@whitewater:registry=https://npm-registry.whitewater.ibm.com/
+```
+
 #### Yeoman Generator
 
 Yeoman travels light. She didn't pack any generators when she moved in. You can think of a generator like a plug-in, and like Yeoman herself, you only have to ask for generators once. This project is all about the Rapid Design System, so let’s grab that generator.
 
-To install generator-rapid, clone the generator repo in the folder where you keep your dev projects:
+To install generator-rapid:
 ```
-git clone git@github.ibm.com:mcpaul/generator-rapid.git
-```
-
-Now, we want to go into the project and link the generator locally with npm:
-```
-cd /generator-rapid
-npm link
+npm install -g @whitewater-rapid
 ```
 
 #### Yo Rapid
