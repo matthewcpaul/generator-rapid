@@ -18,7 +18,7 @@
     "yargs": "^5.0.0"
   },
   "dependencies": {
-    "@whitewater/rapid": "^1.0.0-alpha",
+    "@whitewater/rapid": "^1.0.0-alpha.1",
     "ibm-design-colors": "^1.7.0",
     "modularscale-sass": "^2.1.1"
   }
