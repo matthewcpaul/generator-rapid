@@ -1,6 +1,6 @@
 {
   "name": "@whitewater/generator-rapid",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Yeoman generator for a Rapid Design System project",
   "license": "MIT",
   "repository": "github.ibm.com:mcpaul/rapid-generator.git",

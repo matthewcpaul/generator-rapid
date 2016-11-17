@@ -37,16 +37,10 @@ npm install -g yo
 
 ## Installation
 
-Rapid Generator is available as a package on IBM’s [NPM Enterprise registry](https://npm.whitewater.ibm.com/). To get access, follow [these instructions](https://github.ibm.com/Whitewater/npm-enterprise#option-2-using-npm-enterprise-for-private-packages-only) to authenticate with your w3id. You can initiate the authentication by running:
+Rapid Generator is available as a package on IBM’s [NPM Enterprise registry](https://npm.whitewater.ibm.com/). To get access, follow [these instructions](https://github.ibm.com/Whitewater/npm-enterprise#option-2-using-npm-enterprise-for-private-packages-only) to authenticate with your w3id. You can initiate the authentication by logging in with the `@whitewater` scope:
 
 ```
-npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@<your-scope-here>
-```
-
-Next, create a `.npmrc` file in your project’s root directory and include:
-
-```
-@whitewater:registry=https://npm-registry.whitewater.ibm.com/
+npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@whitewater
 ```
 
 #### Yeoman Generator
