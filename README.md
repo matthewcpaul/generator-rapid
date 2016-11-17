@@ -56,7 +56,7 @@ npm install -g @whitewater-rapid
 
 Then, back in your development directory, run Yeoman to create a new project:
 ```
-yo rapid
+yo @whitewater/rapid
 ```
 
 ## Automated deploys to GitHub
