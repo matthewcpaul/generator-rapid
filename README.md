@@ -49,7 +49,7 @@ Yeoman travels light. She didn't pack any generators when she moved in. You can 
 
 To install generator-rapid:
 ```
-npm install -g @whitewater-rapid
+npm install -g @whitewater/generator-rapid
 ```
 
 #### Yo Rapid
